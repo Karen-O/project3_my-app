@@ -1,7 +1,24 @@
 Rails.application.routes.draw do
   devise_for :users
-
+  # set up root route for devise to reroute to after successful login:
   root 'application#index'
+
+
+
+  # OR, alternate setup, for example if I wanted root route to be to Entries index page:
+
+  # Rails.application.routes.draw do
+  # root 'entries#index'
+  # # alias user routes for account
+  # devise_for :users, :path => 'accounts'
+  # # next post resource under user
+  #   resources :users do
+  #     resources :entries
+  #   end
+  # end
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

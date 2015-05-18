@@ -8,6 +8,13 @@
 </head>
 <body>
 
+<nav>
+
+<!-- Below = Secure signout link for current user -->
+<h3><%= link_to 'Signout', destroy_user_session_path, :method => :delete %></h3>
+
+</nav>
+
 <%= yield %>
 
 </body>
